@@ -1,0 +1,79 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="description" content="{{ head.metaDescription }}" />
+<meta name="keywords" content="{{ head.metaKeywords }}" />
+{{ head.twitterMetaTags|raw }}
+{% if head.sectionHasFavIcon %}
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+{% endif %}
+{% if head.sectionMetaRobots %}<meta name="robots" content="{{ head.metaRobots }}" />{% endif %}
+<title>{{ head.title }}</title>
+{{ head.canonicalUrlTag|raw }}
+{{ head.hrefLangUrlTag|raw }}
+{% if head.sectionRelPrev %}<link rel="prev" href="{{ head.prevUrl }}">{% endif %}
+{% if head.sectionRelNext %}<link rel="next" href="{{ head.nextUrl }}">{% endif %}
+<link rel="stylesheet" type="text/css" href="{{ head.cssFile }}" />
+{% for additionalCssFile in head.additionalCssFiles %}
+<link rel="stylesheet" type="text/css" href="{{ additionalCssFile }}" />
+{% endfor %}
+<script type="text/javascript" src="{{ head.jsFile }}"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="alternate" type="application/rss+xml" title="<mi:text>News</mi:text>" href="{{ url.module }}?ModuleName=com.summercart.rss&amp;UILanguage={{ system.currentLanguageCode }}&amp;FeedType=News" />
+{% if head.sectionHasSeoSchema %}
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "Organization",
+			"name":" {{ header.companyName }}",
+			"url": "{{ head.seoSchema.httpHost }}",
+			"address": {
+				"@type": "PostalAddress",
+				"postalCode": "{{ head.seoSchema.companyZip }}",
+				"addressCountry": "{{ head.seoSchema.companyCountryName }}",
+				"addressLocality": "{{ head.seoSchema.companyCity }}",
+				"addressRegion": "{{ head.seoSchema.companyStateName }}",
+				"streetAddress": "{{ head.seoSchema.companyAddress }}"
+			},
+			"telephone": "{{ head.seoSchema.companyPhone }}",
+			"email": "{{ head.seoSchema.email }}",
+			"image": "{{ head.seoSchema.companyLogo }}"
+		}
+	</script>
+{% endif %}
+<script type="text/javascript">
+$(function(){
+	$('.innerbox').colorbox({minWidth: 500, minHeight: 300, maxWidth: '90%', maxHeight: '96%'});
+	{% if head.sectionHasQuickSearch %}
+	var maxProducts = {{ head.quickSearchMaxProducts }};
+	var httpsDomain = '{{ system.https }}';
+	var searchUrl = '{{ url.search }}';
+	var seeMoreText = '<mi:text escape="js">see more</mi:text>';
+
+	SC.Util.initQuickSearch(httpsDomain, maxProducts, searchUrl, seeMoreText);
+	{% endif %}
+});
+SC.storeRoot = '{{ head.storeRootUrl }}';
+SC.storeRootPath = '{{ system.hostPath }}';
+SC.ML.PROVIDE_VALID_EMAIL = '<mi:text escape="js">You need to provide a valid e-mail address.</mi:text>';
+SC.JSVersion = '{{ head.jsVersion }}';
+</script>
+{% if head.sectionHasPromotionPopup %}{% include('customer/popup/promotion_popup.twig') %}{% endif %}
+{% if head.sectionHasPromotionExitPopup %}{% include('customer/popup/promotion_exit_popup.twig') %}{% endif %}
+{% if head.sectionHasUpSellHead %}{% include('customer/upsell_head.twig') %}{% endif %}
+{% if head.sectionDesignEditor2015SessionSettings %}%%DESIGNEDITORSESSIONSETTINGS%%{% endif %}
+{{ head.scriptCodesEndOfHead|raw }}
+{{ head.breadcrumbJsonLd|raw }}
+{% if head.sectionIsHomePage %}
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "WebSite",
+	"url": "{{ head.storeRootUrl }}",
+	"name": "{{ head.companyName }}"
+}
+</script>
+{% endif %}
+{{ head.bugsnagPerformanceJs|raw }}
+{{ head.bugsnagJs|raw }}
+{{ head.debugBarRenderHead|raw }}
