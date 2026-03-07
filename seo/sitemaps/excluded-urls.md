@@ -61,12 +61,14 @@ Sitemap: https://www.angelcosmetics.bg/sitemap.xml
 
 ## Известни Проблемни URL Patterns
 
-Документирай тук конкретни URL patterns, открити при crawl audit:
+Попълнено след sitemap одит (2026-03-07):
 
-| URL Pattern | Проблем | Решение | Статус |
-|-------------|---------|---------|--------|
-| _[Попълни след crawl audit]_ | | | |
-| _[Например: /products/?brand=X&sort=Y]_ | Filter + sort combo | Noindex + canonical | Pending |
+| URL Pattern | Брой | Проблем | Решение | Статус |
+|-------------|------|---------|---------|--------|
+| `/slug-na-produkt.html` (root level) | 223 | Стари продуктови URL-и преди миграция — дубликати | 301 → `/product/ID/slug.html` + изключи от sitemap | ⏳ Pending |
+| `/brand-product-name` (без .html) | ~439 | Стари slug URL-и — статусът неизвестен | Провери HTTP статус → redirect или canonical | ⏳ Pending |
+| `/shampoani`, `/balsam-za-kosa` и др. | ~64 | Стари категорийни URL-и без `/category/ID/` структура | 301 → новата категория или noindex | ⏳ Pending |
+| BG URL-и в EN sitemap (без `/en/`) | 275 | Объркан hreflang сигнал за Google | Изчисти EN sitemap — остави само `/en/...` | ⏳ Pending |
 
 ---
 
