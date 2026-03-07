@@ -1,0 +1,77 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="description" content="%%META_DESCRIPTION%%" />
+<meta name="keywords" content="%%META_KEYWORDS%%" />
+%%TWITTER_META_TAGS%%
+<mi:section name="hasFavIcon">
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+</mi:section>
+<mi:section name="metaRobots"><meta name="robots" content="%%META_ROBOTS%%" /></mi:section>
+<title>%%TITLE%%</title>
+%%CANONICAL_URL_TAG%%
+%%HREFLANG_URL_TAG%%
+<mi:section name="relPrev"><link rel="prev" href="%%PREVURL%%"></mi:section>
+<mi:section name="relNext"><link rel="next" href="%%NEXTURL%%"></mi:section>
+<link rel="stylesheet" type="text/css" href="%%CSS_FILE%%" />
+<script type="text/javascript" src="%%JS_FILE%%"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="alternate" type="application/rss+xml" title="<mi:text>News</mi:text>" href="%%URL_MODULE%%?ModuleName=com.summercart.rss&amp;UILanguage=%%CURRENT_LANGUAGE_CODE%%&amp;FeedType=News" />
+<mi:section name="hasSeoSchema">
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "Organization",
+			"name": "%%COMPANY_NAME%%",
+			"url": "%%HTTP_HOST%%",
+			"address": {
+				"@type": "PostalAddress",
+				"postalCode": "%%COMPANYZIP%%",
+				"addressCountry": "%%COMPANYCOUNTRYNAME%%",
+				"addressLocality": "%%COMPANYCITY%%",
+				"addressRegion": "%%COMPANYSTATENAME%%",
+				"streetAddress": "%%COMPANYADDRESS%%"
+			},
+			"telephone": "%%COMPANYPHONE%%",
+			"email": "%%EMAIL%%",
+			"image" : "%%COMPANY_LOGO%%"
+		}
+	</script>
+</mi:section>
+<script type="text/javascript">
+$(function(){
+	$('.innerbox').colorbox({minWidth: 500, minHeight: 300, maxWidth: '90%', maxHeight: '96%'});
+	<mi:section name="hasQuickSearch">
+	var maxProducts = %%QUICK_SEARCH_MAX_PRODUCTS%%;
+	var httpsDomain = '%%HTTPS%%';
+	var searchUrl = '%%URL_SEARCH%%';
+	var seeMoreText = '<mi:text escape="js">see more</mi:text>';
+
+	SC.Util.initQuickSearch(httpsDomain, maxProducts, searchUrl, seeMoreText);
+	</mi:section>
+});
+SC.storeRoot = '%%STORE_ROOT_URL%%';
+SC.storeRootPath = '%%HOST_PATH%%';
+SC.ML.PROVIDE_VALID_EMAIL = '<mi:text escape="js">You need to provide a valid e-mail address.</mi:text>';
+SC.JSVersion = '%%JS_VERSION%%';
+</script>
+<mi:section name="hasPromotionPopup" src="popup/promotion_popup.tmpl"></mi:section>
+<mi:section name="hasPromotionExitPopup" src="popup/promotion_exit_popup.tmpl"></mi:section>
+<mi:section name="hasUpsellHead" src="upsell_head.tmpl"></mi:section>
+<mi:section name="designEditor2015SessionSettings">%%DESIGNEDITORSESSIONSETTINGS%%</mi:section>
+%%SCRIPT_CODES_END_OF_HEAD%%
+%%BREADCRUMB_JSON_LD%%
+<mi:section name="isHomePage">
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "WebSite",
+	"url": "%%STORE_ROOT_URL%%",
+	"name": "%%COMPANY_NAME%%"
+}
+</script>
+</mi:section>
+%%DEBUGBAR_RENDER_HEAD%%
