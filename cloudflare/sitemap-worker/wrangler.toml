@@ -7,5 +7,9 @@ binding = "SITEMAPS"
 bucket_name = "angelcosmetics-sitemaps"
 
 [[routes]]
-pattern = "angelcosmetics.bg/sitemap-*.xml"
+pattern = "angelcosmetics.bg/sitemap*"
+zone_name = "angelcosmetics.bg"
+
+[[routes]]
+pattern = "angelcosmetics.bg/robots.txt"
 zone_name = "angelcosmetics.bg"
