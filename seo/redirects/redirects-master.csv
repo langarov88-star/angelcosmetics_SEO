@@ -1,0 +1,27 @@
+old_url,new_url,type,reason,date_added,added_by,status
+# FORMAT INSTRUCTIONS:
+# old_url: Full path WITHOUT domain (e.g., /old-category/)
+# new_url: Full path WITHOUT domain (e.g., /new-category/)
+# type: 301 (permanent) or 302 (temporary)
+# reason: Brief description why redirect was added
+# date_added: YYYY-MM-DD
+# added_by: Name or initials
+# status: active | retired | testing
+#
+# RULES:
+# 1. Always use 301 unless the redirect is explicitly temporary
+# 2. No redirect chains (A→B→C) — always point to the final destination
+# 3. Test every redirect before marking as active
+# 4. Archive old rows (don't delete) when retired — move to /redirects/archive/
+# 5. This file is the source of truth for Cloudflare Bulk Redirects
+#
+# CLOUDFLARE IMPORT:
+# Remove comment lines (starting with #) before importing to Cloudflare Bulk Redirects
+# Cloudflare format requires full URLs — update import script accordingly
+#
+# ─────────────────────────────────────────────────────────────────
+# ADD ACTUAL REDIRECTS BELOW THIS LINE
+# ─────────────────────────────────────────────────────────────────
+# Example rows (remove these and add real data):
+# /old-product-slug/,/face-care/serums/new-product-slug/,301,Product URL updated to new taxonomy,2025-03-07,SEO Manager,active
+# /brands/old-brand-name/,/brands/correct-brand-slug/,301,Brand slug corrected,2025-03-07,SEO Manager,active

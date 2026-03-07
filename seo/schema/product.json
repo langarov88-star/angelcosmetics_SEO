@@ -1,0 +1,68 @@
+{
+  "_comment": "Product Schema Template for angelcosmetics.bg",
+  "_instructions": "Replace all {PLACEHOLDERS} with real values. Remove _comment and _instructions fields before injection.",
+  "_validation": "Test at: https://search.google.com/test/rich-results",
+  "_docs": "https://schema.org/Product",
+
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "{PRODUCT_FULL_NAME}",
+  "description": "{PRODUCT_DESCRIPTION_150_CHARS_MIN}",
+  "brand": {
+    "@type": "Brand",
+    "name": "{BRAND_NAME}"
+  },
+  "image": [
+    "{IMAGE_URL_MAIN}",
+    "{IMAGE_URL_ANGLE_2}",
+    "{IMAGE_URL_ANGLE_3}"
+  ],
+  "sku": "{SKU_OR_EAN}",
+  "mpn": "{MANUFACTURER_PART_NUMBER_IF_AVAILABLE}",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "BGN",
+    "price": "{PRICE_NO_CURRENCY_SYMBOL}",
+    "priceValidUntil": "{YYYY-MM-DD_OR_REMOVE_FIELD}",
+    "availability": "{USE_ONE_OF_BELOW}",
+    "_availabilityOptions": {
+      "in_stock": "https://schema.org/InStock",
+      "out_of_stock": "https://schema.org/OutOfStock",
+      "limited": "https://schema.org/LimitedAvailability",
+      "preorder": "https://schema.org/PreOrder"
+    },
+    "url": "https://www.angelcosmetics.bg/{PRODUCT_URL_PATH}",
+    "seller": {
+      "@type": "Organization",
+      "name": "Angel Cosmetics"
+    }
+  },
+  "aggregateRating": {
+    "_comment": "Only include if there are REAL reviews. Remove entire aggregateRating block if no reviews yet.",
+    "@type": "AggregateRating",
+    "ratingValue": "{AVERAGE_RATING_E.G._4.7}",
+    "ratingCount": "{TOTAL_NUMBER_OF_RATINGS}",
+    "reviewCount": "{TOTAL_NUMBER_OF_WRITTEN_REVIEWS}",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "_comment": "Include 1-3 top reviews. Remove entire review array if no reviews.",
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "{REVIEW_RATING}",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "{REVIEWER_NAME}"
+      },
+      "reviewBody": "{REVIEW_TEXT}",
+      "datePublished": "{YYYY-MM-DD}"
+    }
+  ],
+  "category": "{PRODUCT_CATEGORY_NAME}",
+  "url": "https://www.angelcosmetics.bg/{PRODUCT_URL_PATH}"
+}

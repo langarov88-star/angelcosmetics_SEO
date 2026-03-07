@@ -1,0 +1,61 @@
+{
+  "_comment": "Organization + WebSite + SiteLinksSearchBox Schema for angelcosmetics.bg",
+  "_instructions": "This goes in the <head> of the HOME PAGE ONLY. Fill in actual data.",
+  "_validation": "Test at: https://search.google.com/test/rich-results",
+  "_usage": "HOME PAGE ONLY — do not add to other pages",
+
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.angelcosmetics.bg/#organization",
+      "name": "Angel Cosmetics",
+      "url": "https://www.angelcosmetics.bg",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.angelcosmetics.bg/{PATH_TO_LOGO}",
+        "width": "{LOGO_WIDTH_PX}",
+        "height": "{LOGO_HEIGHT_PX}"
+      },
+      "description": "Онлайн магазин за дерматологична козметика с продукти от La Roche-Posay, CeraVe, The Ordinary, Vichy и още 50+ марки.",
+      "sameAs": [
+        "{FACEBOOK_PAGE_URL}",
+        "{INSTAGRAM_URL}",
+        "{YOUTUBE_URL_IF_EXISTS}",
+        "{TIKTOK_URL_IF_EXISTS}"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "{PHONE_NUMBER}",
+        "contactType": "customer service",
+        "availableLanguage": "Bulgarian",
+        "areaServed": "BG"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "BG",
+        "addressLocality": "{CITY}",
+        "_comment": "Only add if you have a physical address you want to show"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.angelcosmetics.bg/#website",
+      "url": "https://www.angelcosmetics.bg",
+      "name": "Angel Cosmetics",
+      "description": "Онлайн козметичен магазин — дерматологична козметика от топ брандове",
+      "publisher": {
+        "@id": "https://www.angelcosmetics.bg/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.angelcosmetics.bg/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string",
+        "_comment": "SiteLinksSearchBox — adjust URL to match actual Summer Cart search URL format"
+      }
+    }
+  ]
+}

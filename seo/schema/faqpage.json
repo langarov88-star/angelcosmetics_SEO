@@ -1,0 +1,83 @@
+{
+  "_comment": "FAQPage Schema Template for angelcosmetics.bg",
+  "_instructions": "Replace {PLACEHOLDERS} with real Q&A content. Add more Question blocks as needed.",
+  "_validation": "Test at: https://search.google.com/test/rich-results",
+  "_docs": "https://schema.org/FAQPage",
+  "_usage": "Use on: Problem pages, Ingredient pages, Brand pages, Category pages, Blog articles",
+  "_rules": [
+    "Only use if FAQ is VISIBLE on the page (not hidden in JavaScript)",
+    "Questions must be real questions, not keyword-stuffed phrases",
+    "Answers must be complete and informative (not just 'click here')",
+    "Do NOT use FAQPage schema on every page — only where genuine FAQ content exists",
+    "Maximum 1 FAQPage schema per page",
+    "Minimum 2-3 Q&A pairs to justify schema"
+  ],
+
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "{QUESTION_1_TEXT}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{ANSWER_1_TEXT — minimum 50 chars, informative, no HTML tags}"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "{QUESTION_2_TEXT}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{ANSWER_2_TEXT}"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "{QUESTION_3_TEXT}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{ANSWER_3_TEXT}"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "{QUESTION_4_TEXT}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{ANSWER_4_TEXT}"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "{QUESTION_5_TEXT}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{ANSWER_5_TEXT}"
+      }
+    }
+  ],
+
+  "_example_dry_skin_page": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Каква е разликата между суха и обезводнена кожа?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Сухата кожа е тип кожа — постоянна характеристика, при която жлезите произвеждат по-малко себум. Обезводнената кожа е временно състояние, при което кожата липсва вода. Обезводнена може да бъде дори мазна кожа. За суха кожа използваме масла и емоленти; за обезводнена — хиалуронова киселина и хумектанти."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Кой крем е най-добър за суха кожа?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "За суха кожа търсим кремове с керамиди (CeraVe), урея (Eucerin), или мастни киселини (La Roche-Posay Lipikar). Избягвайте продукти с алкохол и силни аромати. Оптимален е крем с плътна, emollient текстура за вечерна употреба и по-лека хидратация сутрин под SPF."
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "_comment": "BreadcrumbList Schema Template for angelcosmetics.bg",
+  "_instructions": "Replace {PLACEHOLDERS} with real values. Adjust ListItem array per page depth.",
+  "_validation": "Test at: https://search.google.com/test/rich-results",
+  "_docs": "https://schema.org/BreadcrumbList",
+  "_usage": "Add to ALL indexed pages: category, brand, series, product, problem, ingredient, blog",
+
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Начало",
+      "item": "https://www.angelcosmetics.bg/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{TIER1_CATEGORY_NAME}",
+      "item": "https://www.angelcosmetics.bg/{TIER1_SLUG}/"
+    },
+    {
+      "_comment": "Add or remove ListItem blocks based on page depth",
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{TIER2_OR_BRAND_OR_SUBCATEGORY_NAME}",
+      "item": "https://www.angelcosmetics.bg/{TIER1_SLUG}/{TIER2_SLUG}/"
+    },
+    {
+      "_comment": "Only for product pages or deep pages. Remove for 2-level pages.",
+      "@type": "ListItem",
+      "position": 4,
+      "name": "{PRODUCT_OR_PAGE_NAME}",
+      "item": "https://www.angelcosmetics.bg/{FULL_URL_PATH}/"
+    }
+  ],
+
+  "_examples": {
+    "category_page": {
+      "url": "/face-care/serums/",
+      "breadcrumb": "Начало > Козметика за лице > Серуми за лице",
+      "positions": 3
+    },
+    "brand_page": {
+      "url": "/brands/la-roche-posay/",
+      "breadcrumb": "Начало > Брандове > La Roche-Posay",
+      "positions": 3
+    },
+    "series_page": {
+      "url": "/brands/la-roche-posay/effaclar/",
+      "breadcrumb": "Начало > Брандове > La Roche-Posay > Effaclar",
+      "positions": 4
+    },
+    "product_page": {
+      "url": "/face-care/serums/la-roche-posay-effaclar-duo-plus-40ml/",
+      "breadcrumb": "Начало > Козметика за лице > Серуми > Effaclar Duo+",
+      "positions": 4
+    },
+    "problem_page": {
+      "url": "/skin-concerns/dry-skin/",
+      "breadcrumb": "Начало > Кожни проблеми > Суха кожа",
+      "positions": 3
+    },
+    "ingredient_page": {
+      "url": "/ingredients/niacinamide/",
+      "breadcrumb": "Начало > Съставки > Ниацинамид",
+      "positions": 3
+    }
+  }
+}

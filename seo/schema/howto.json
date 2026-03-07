@@ -1,0 +1,78 @@
+{
+  "_comment": "HowTo Schema Template for Routine / Solution Pages",
+  "_instructions": "Use on Routine pages (/routines/{slug}/). Replace {PLACEHOLDERS}.",
+  "_validation": "Test at: https://search.google.com/test/rich-results",
+  "_docs": "https://schema.org/HowTo",
+  "_usage": "Routine/Solution pages — where there are clear sequential steps",
+
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "{ROUTINE_TITLE}",
+  "description": "{ROUTINE_DESCRIPTION_100_CHARS_MIN}",
+  "image": {
+    "@type": "ImageObject",
+    "url": "{ROUTINE_FEATURED_IMAGE_URL}"
+  },
+  "totalTime": "{DURATION_E.G._PT5M_FOR_5_MINUTES}",
+  "supply": [
+    {
+      "@type": "HowToSupply",
+      "name": "{PRODUCT_1_NAME}"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "{PRODUCT_2_NAME}"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "{PRODUCT_3_NAME}"
+    }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "{STEP_1_NAME}",
+      "text": "{STEP_1_DESCRIPTION}",
+      "image": "{STEP_1_IMAGE_URL_OPTIONAL}"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "{STEP_2_NAME}",
+      "text": "{STEP_2_DESCRIPTION}",
+      "image": "{STEP_2_IMAGE_URL_OPTIONAL}"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "{STEP_3_NAME}",
+      "text": "{STEP_3_DESCRIPTION}"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "{STEP_4_NAME}",
+      "text": "{STEP_4_DESCRIPTION}"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "{STEP_5_NAME}",
+      "text": "{STEP_5_DESCRIPTION}"
+    }
+  ],
+
+  "_example": {
+    "name": "Сутрешна рутина за суха кожа",
+    "description": "5-стъпкова сутрешна рутина за суха кожа с продукти от CeraVe, La Roche-Posay и Vichy",
+    "totalTime": "PT10M",
+    "steps": [
+      "Стъпка 1: Почистване — Нежен почистващ гел или мицеларна вода",
+      "Стъпка 2: Тонер — Хидратиращ тонер без алкохол",
+      "Стъпка 3: Серум — Хиалуронова киселина или хидратиращ серум",
+      "Стъпка 4: Крем — Хидратиращ крем с керамиди",
+      "Стъпка 5: SPF — Слънцезащитен крем минимум SPF 30"
+    ]
+  }
+}
