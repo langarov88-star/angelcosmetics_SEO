@@ -1,0 +1,11 @@
+name = "angelcosmetics-sitemaps"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+[[r2_buckets]]
+binding = "SITEMAPS"
+bucket_name = "angelcosmetics-sitemaps"
+
+[[routes]]
+pattern = "angelcosmetics.bg/sitemap-*.xml"
+zone_name = "angelcosmetics.bg"
