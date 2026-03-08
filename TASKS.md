@@ -6,7 +6,7 @@
 ---
 
 ## Легенда
-🔴 СЕГА &nbsp;|&nbsp; 🟡 WEEK 2 &nbsp;|&nbsp; 🟠 MONTH 1 &nbsp;|&nbsp; ⚫ MONTH 2
+🔴 СЕГА | 🟡 WEEK 2 | 🟠 MONTH 1 | ⚫ MONTH 2
 
 | Статус | Значение |
 |--------|----------|
@@ -26,8 +26,20 @@
 | 3 | **Noindex** на filter/sort/search result pages | DEV | HIGH | LOW | ✅ Завършена |
 | 4 | **XML Sitemap** — провери и изчисти (само indexed pages) | SEO + DEV | HIGH | LOW | ✅ Завършена |
 | 5 | **GitHub repo setup** — structure, initial docs, taxonomy | SEO + DEV | HIGH | MEDIUM | ✅ Завършена |
-| 6 | **Cloudflare cache rules** — setup per page type | CLOUDFLARE | HIGH | MEDIUM | ☐ |
+| 6 | **Cloudflare cache rules** — setup per page type | CLOUDFLARE | HIGH | MEDIUM | ✅ Завършена |
 | 7 | **Canonical tags** — product pages, category variants | DEV | HIGH | MEDIUM | ✅ Завършена |
+
+---
+
+## 🔴 CLOUDFLARE PERFORMANCE — Сесия 2026-03-08
+
+| # | Задача | Тип | Impact | Effort | Статус |
+|---|--------|-----|--------|--------|--------|
+| 6a | **Cloudflare Pro upgrade** — план $20/мес активиран | CLOUDFLARE | HIGH | LOW | ✅ Завършена |
+| 6b | **Cache Rules (6 правила)** — BYPASS cart/checkout/account/wishlist + search/filters; CACHE static (1г), products (24ч), categories (12ч), homepage (2ч) | CLOUDFLARE | HIGH | MEDIUM | ✅ Завършена |
+| 6c | **Polish + WebP** — автоматична компресия и конвертиране на снимки (~60% по-малки) | CLOUDFLARE | HIGH | LOW | ✅ Завършена |
+| 6d | **Super Bot Fight Mode** — блокиране на ~63k бот заявки/ден (США, Китай, др.) | CLOUDFLARE | HIGH | LOW | ✅ Завършена |
+| 6e | **Cache Hit Rate мониторинг** — провери Analytics след 48ч, цел: >75% | CLOUDFLARE | HIGH | LOW | ⏳ Чака 48ч |
 
 ---
 
@@ -67,8 +79,15 @@
 
 ## Прогрес
 
-```
-Завършени:  6 / 20  (30%)
-В процес:   0 / 20
-Чакащи:     14 / 20
-```
+\`\`\`
+Завършени:  11 / 25  (44%)
+В процес:    0 / 25
+Чакащи:     14 / 25
+
+── Cloudflare сесия 2026-03-08 ──────────────────────────
+✅ Pro план активиран
+✅ 6 Cache Rules конфигурирани (BYPASS + CACHE)
+✅ Polish + WebP включен
+✅ Super Bot Fight Mode активиран (~63k бота/ден блокирани)
+⏳ Cache Hit Rate проверка → след 48ч (цел: >75%)
+\`\`\`
