@@ -23,8 +23,8 @@
 |---|--------|-----|--------|--------|--------|
 | 1 | **Audit на текущи indexed pages** — намери дубликати, thin pages, filter URLs | SEO | HIGH | LOW | ⏳ Чака GSC |
 | 2 | **Robots.txt** — disallow search, filter, sort параметри | DEV | HIGH | LOW | ✅ Завършена |
-| 3 | **Noindex** на filter/sort/search result pages | DEV | HIGH | LOW | ☐ |
-| 4 | **XML Sitemap** — провери и изчисти (само indexed pages) | SEO + DEV | HIGH | LOW | ☐ |
+| 3 | **Noindex** на filter/sort/search result pages | DEV | HIGH | LOW | ✅ Завършена |
+| 4 | **XML Sitemap** — провери и изчисти (само indexed pages) | SEO + DEV | HIGH | LOW | ✅ Завършена |
 | 5 | **GitHub repo setup** — structure, initial docs, taxonomy | SEO + DEV | HIGH | MEDIUM | ✅ Завършена |
 | 6 | **Cloudflare cache rules** — setup per page type | CLOUDFLARE | HIGH | MEDIUM | ☐ |
 | 7 | **Canonical tags** — product pages, category variants | DEV | HIGH | MEDIUM | ✅ Завършена |
@@ -68,7 +68,7 @@
 ## Прогрес
 
 ```
-Завършени:  4 / 20  (20%)
+Завършени:  6 / 20  (30%)
 В процес:   0 / 20
-Чакащи:     16 / 20
+Чакащи:     14 / 20
 ```
