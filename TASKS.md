@@ -1,7 +1,7 @@
 # SECTION 14: PRIORITIZED ACTION LIST — Първите 20 Задачи
 ### angelcosmetics.bg — SEO & DEV Roadmap
 
-> Последна актуализация: 2026-03-08
+> Последна актуализация: 2026-03-10
 
 ---
 
@@ -48,7 +48,7 @@
 | # | Задача | Тип | Impact | Effort | Статус |
 |---|--------|-----|--------|--------|--------|
 | 8 | **Product schema validation** за всички product pages | DEV | HIGH | MEDIUM | ✅ Завършена |
-| 9 | **URL taxonomy** документация в GitHub | SEO | HIGH | MEDIUM | ☐ |
+| 9 | **URL taxonomy** документация в GitHub | SEO | HIGH | MEDIUM | ✅ Завършена |
 | 10 | **Top 5 category pages** — добави editorial intro copy | CONTENT | HIGH | MEDIUM | ☐ |
 
 ---
@@ -80,9 +80,9 @@
 ## Прогрес
 
 \`\`\`
-Завършени:  11 / 25  (44%)
+Завършени:  12 / 25  (48%)
 В процес:    0 / 25
-Чакащи:     14 / 25
+Чакащи:     13 / 25
 
 ── Cloudflare сесия 2026-03-08 ──────────────────────────
 ✅ Pro план активиран
@@ -90,4 +90,7 @@
 ✅ Polish + WebP включен
 ✅ Super Bot Fight Mode активиран (~63k бота/ден блокирани)
 ⏳ Cache Hit Rate проверка → след 48ч (цел: >75%)
+
+── SEO сесия 2026-03-10 ─────────────────────────────────
+✅ Task 9: URL taxonomy документация → seo/taxonomy/url-taxonomy.md
 \`\`\`
