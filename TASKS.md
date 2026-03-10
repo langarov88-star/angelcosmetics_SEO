@@ -49,7 +49,7 @@
 |---|--------|-----|--------|--------|--------|
 | 8 | **Product schema validation** за всички product pages | DEV | HIGH | MEDIUM | ✅ Завършена |
 | 9 | **URL taxonomy** документация в GitHub | SEO | HIGH | MEDIUM | ✅ Завършена |
-| 10 | **Top 5 category pages** — добави editorial intro copy | CONTENT | HIGH | MEDIUM | ☐ |
+| 10 | **Top 5 category pages** — добави editorial intro copy | CONTENT | HIGH | MEDIUM | ✅ Завършена |
 
 ---
 
@@ -80,9 +80,9 @@
 ## Прогрес
 
 \`\`\`
-Завършени:  12 / 25  (48%)
+Завършени:  13 / 25  (52%)
 В процес:    0 / 25
-Чакащи:     13 / 25
+Чакащи:     12 / 25
 
 ── Cloudflare сесия 2026-03-08 ──────────────────────────
 ✅ Pro план активиран
@@ -93,4 +93,5 @@
 
 ── SEO сесия 2026-03-10 ─────────────────────────────────
 ✅ Task 9: URL taxonomy документация → seo/taxonomy/url-taxonomy.md
+✅ Task 10: Editorial copy за 5 категории → seo/content/categories/
 \`\`\`
